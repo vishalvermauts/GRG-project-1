@@ -1,7 +1,5 @@
 basic.forever(function () {
-    if (input.pinIsPressed(TouchPin.P0)) {
-        music.ringTone(988)
-    } else {
-        music.stopAllSounds()
-    }
+    record.startRecording(record.BlockingState.Blocking)
+    music.setBuiltInSpeakerEnabled(false)
+    record.playAudio(record.BlockingState.Blocking)
 })
